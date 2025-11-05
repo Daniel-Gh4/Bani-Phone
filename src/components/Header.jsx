@@ -12,7 +12,7 @@ function Header() {
           className="relative z-50 flex justify-between items-center gap-4 text-white"
           href={"/"}
         >
-          <h2>WELLCOME</h2>
+          <h2>Bani Phone</h2>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
