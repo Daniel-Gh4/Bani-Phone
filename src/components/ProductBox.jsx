@@ -1,30 +1,27 @@
 import Link from "next/link";
 
 export function enTofa(input) {
-    const enTofa = {
-      0: "۰",
-      1: "۱",
-      2: "۲",
-      3: "۳",
-      4: "۴",
-      5: "۵",
-      6: "۶",
-      7: "۷",
-      8: "۸",
-      9: "۹",
-    };
-    return input.toString().replace(/[0-9]/g, (digit) => enTofa[digit]);
-  }
+  const enTofa = {
+    0: "۰",
+    1: "۱",
+    2: "۲",
+    3: "۳",
+    4: "۴",
+    5: "۵",
+    6: "۶",
+    7: "۷",
+    8: "۸",
+    9: "۹",
+  };
+  return input.toString().replace(/[0-9]/g, (digit) => enTofa[digit]);
+}
 
 function ProductBox({ product }) {
-
   return (
     <div className="border border-amber-100 rounded-xl p-2.5 transition-all duration-300 ease-in hover:shadow-xl hover:-translate-y-1.5">
       <div className="center bg-amber-100 p-4 h-40 rounded-xl shadow-md ">
         <img
           className="max-w-11/12 max-h-11/12 object-contain"
-          width={150}
-          height={150}
           src={product.image}
           alt={product.title}
         />
