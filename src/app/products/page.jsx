@@ -1,7 +1,7 @@
 import LatestProducts from "@/components/LatestProducts";
 
-function Products() {
-  return <LatestProducts />;
+function Products({ searchParams }) {
+  return <LatestProducts searchParams={searchParams} />;
 }
 
 export default Products;

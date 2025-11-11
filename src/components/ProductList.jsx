@@ -5,7 +5,7 @@ function ProductList({ products }) {
     <div className="pb-8 grid grid-cols-2 gap-5 md:grid-cols-3 xl:grid-cols-4">
       {products.length > 0 &&
         products.map((product) => (
-          <ProductBox product={product} key={product.id} />
+          <ProductBox product={product} key={product._id} />
         ))}
     </div>
   );

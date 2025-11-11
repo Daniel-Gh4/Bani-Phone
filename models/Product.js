@@ -1,0 +1,14 @@
+const { default: mongoose } = require("mongoose");
+
+const ProductSchema = new mongoose.Schema(
+  {
+    title: String,
+    price: Number,
+    image: String,
+    description: String,
+  },
+  { timeseries: true }
+);
+
+export default mongoose.model.ProductSchema ||
+  mongoose.model("Product", ProductSchema);

@@ -57,8 +57,12 @@ function Cart() {
             <table className="w-full border-collapse">
               <thead>
                 <tr>
-                  <th className="p-3 text-right border-b border-b-white font-bold">کالا</th>
-                  <th className="p-3 text-right border-b border-b-white font-bold">قیمت (تومان)</th>
+                  <th className="p-3 text-right border-b border-b-white font-bold">
+                    کالا
+                  </th>
+                  <th className="p-3 text-right border-b border-b-white font-bold">
+                    قیمت (تومان)
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -73,12 +77,18 @@ function Cart() {
                       />
                       {product.title}
                     </td>
-                    <td className="p-3 text-right border-b border-b-white">{enTofa(product.price)}</td>
+                    <td className="p-3 text-right border-b border-b-white">
+                      {enTofa(product.price)}
+                    </td>
                   </tr>
                 ))}
                 <tr>
-                  <td className="p-3 text-right border-b border-b-white">مجموع:</td>
-                  <td className="p-3 text-right border-b border-b-white">{enTofa(totalPrice)}</td>
+                  <td className="p-3 text-right border-b border-b-white">
+                    مجموع:
+                  </td>
+                  <td className="p-3 text-right border-b border-b-white">
+                    {enTofa(totalPrice)}
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -89,13 +99,39 @@ function Cart() {
         <div className="bg-white p-5 rounded-xl shadow-lg">
           <h2 className="text-xl font-bold mb-4 text-right">اطلاعات شما</h2>
           <form className="flex flex-col gap-2.5">
-            <input type="text" className="p-2.5 border border-white rounded-lg text-sm w-full" placeholder="نام" />
-            <input type="text" className="p-2.5 border border-white rounded-lg text-sm w-full" placeholder="ایمیل" />
-            <input type="text" className="p-2.5 border border-white rounded-lg text-sm w-full" placeholder="شهر" />
-            <input type="text" className="p-2.5 border border-white rounded-lg text-sm w-full" placeholder="کشور" />
-            <input type="text" className="p-2.5 border border-white rounded-lg text-sm w-full" placeholder="آدرس" />
-            <input type="text" className="p-2.5 border border-white rounded-lg text-sm w-full" placeholder="کد پستی" />
-            <button className="bg-black text-white p-3 border-none rounded-lg text-lg cursor-pointer text-center disabled:text-gray-500 disabled:cursor-not-allowed">پرداخت آنلاین</button>
+            <input
+              type="text"
+              className="p-2.5 border border-white rounded-lg text-sm w-full"
+              placeholder="نام"
+            />
+            <input
+              type="text"
+              className="p-2.5 border border-white rounded-lg text-sm w-full"
+              placeholder="ایمیل"
+            />
+            <input
+              type="text"
+              className="p-2.5 border border-white rounded-lg text-sm w-full"
+              placeholder="شهر"
+            />
+            <input
+              type="text"
+              className="p-2.5 border border-white rounded-lg text-sm w-full"
+              placeholder="کشور"
+            />
+            <input
+              type="text"
+              className="p-2.5 border border-white rounded-lg text-sm w-full"
+              placeholder="آدرس"
+            />
+            <input
+              type="text"
+              className="p-2.5 border border-white rounded-lg text-sm w-full"
+              placeholder="کد پستی"
+            />
+            <button className="bg-black text-white p-3 border-none rounded-lg text-lg cursor-pointer text-center disabled:text-gray-500 disabled:cursor-not-allowed">
+              پرداخت آنلاین
+            </button>
           </form>
         </div>
       )}

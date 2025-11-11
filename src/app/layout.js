@@ -18,5 +18,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-// https://github.com/sharif-saeed/nextjs-ecommerce-dashboard
