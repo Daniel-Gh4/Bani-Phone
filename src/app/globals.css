@@ -7,7 +7,3 @@
 .center {
   @apply flex justify-center items-center;
 }
-
-.active{
-  display: block;
-}

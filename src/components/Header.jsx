@@ -1,9 +1,12 @@
 "use client";
+import { CartContext } from "@/contexts/CartContext";
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { enTofa } from "./ProductBox";
 
 function Header() {
   const [isActiveMobile, setIsActiveMobile] = useState(false);
+  const { cart } = useContext(CartContext);
 
   return (
     <header className="bg-sky-600 p-2.5">
@@ -29,8 +32,8 @@ function Header() {
           </svg>
         </Link>
         <nav
-          className={`hidden gap-4 fixed top-0 bottom-0 left-0 right-0 py-16 px-5 bg-sky-600 z-40 md:flex md:static md:p-0 ${
-            isActiveMobile ? "active" : ""
+          className={`gap-4 fixed top-0 bottom-0 left-0 right-0 py-16 px-5 bg-sky-600 z-40 md:flex md:static md:p-0 ${
+            isActiveMobile ? "block" : "hidden"
           }`}
         >
           <Link
@@ -51,6 +54,13 @@ function Header() {
           >
             سبد خرید
           </Link>
+          {cart.length > 0 ? (
+            <span className="block text-white no-underline py-2.5 px-0 md:p-0">
+              {enTofa(cart.length)}
+            </span>
+          ) : (
+            ""
+          )}
         </nav>
         <button
           onClick={() => {

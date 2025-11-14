@@ -1,4 +1,7 @@
+"use client";
+import { CartContext } from "@/contexts/CartContext";
 import Link from "next/link";
+import { useContext } from "react";
 
 export function enTofa(input) {
   const enTofa = {
@@ -17,6 +20,7 @@ export function enTofa(input) {
 }
 
 function ProductBox({ product }) {
+  let { addToCart } = useContext(CartContext);
   return (
     <div className="border border-amber-100 rounded-xl p-2.5 transition-all duration-300 ease-in hover:shadow-xl hover:-translate-y-1.5">
       <Link href={`products/${product._id}`}>
@@ -35,7 +39,10 @@ function ProductBox({ product }) {
           </div>
         </Link>
         <div className="flex items-center justify-between mt-1.5">
-          <button className="bg-sky-600 text-white border-none py-1.5 px-4 rounded-lg cursor-pointer transition-colors duration-300 ease-in hover:bg-sky-700">
+          <button
+            onClick={() => addToCart(product)}
+            className="bg-sky-600 text-white border-none py-1.5 px-4 rounded-lg cursor-pointer transition-colors duration-300 ease-in hover:bg-sky-700"
+          >
             افزودن به سبد خرید
           </button>
           <span className="text-base font-bold text-gray-800 md:text-lg xl:text-2xl">
