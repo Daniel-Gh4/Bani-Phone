@@ -32,7 +32,7 @@ function Cart() {
     };
 
     try {
-      const res = await fetch("http://localhost:3000/api/orders", {
+      const res = await fetch("/api/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(orderData),
@@ -96,7 +96,7 @@ function Cart() {
                             Number(event.target.value)
                           );
                         }}
-                        className="w-12 p-1 text-center text-lg border border-amber-100 rounded"
+                        className="w-12 p-1 text-center text-lg border border-gray-100 rounded"
                       />
                       <button
                         onClick={() => {

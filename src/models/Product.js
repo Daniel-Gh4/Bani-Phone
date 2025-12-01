@@ -6,6 +6,7 @@ const ProductSchema = new mongoose.Schema(
     price: Number,
     image: String,
     description: String,
+    category: String,
   },
   { timeseries: true }
 );

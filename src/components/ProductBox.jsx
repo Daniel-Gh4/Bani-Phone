@@ -22,9 +22,9 @@ export function enTofa(input) {
 function ProductBox({ product }) {
   let { addToCart } = useContext(CartContext);
   return (
-    <div className="border border-amber-100 rounded-xl p-2.5 transition-all duration-300 ease-in hover:shadow-xl hover:-translate-y-1.5">
+    <div className="border border-gray-100 rounded-xl p-2.5 transition-all duration-300 ease-in hover:shadow-xl hover:-translate-y-1.5">
       <Link href={`products/${product._id}`}>
-        <div className="center bg-amber-100 p-4 h-40 rounded-xl shadow-md ">
+        <div className="center bg-gray-100 p-4 h-40 rounded-xl shadow-md ">
           <img
             className="max-w-11/12 max-h-11/12 object-contain rounded-xl"
             src={product.image}

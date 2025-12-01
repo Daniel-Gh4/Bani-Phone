@@ -1,11 +1,11 @@
 export default function Home() {
   return (
-    <div className="p-8 flex flex-col md:flex-row gap-8 justify-around items-center bg-amber-100 w-4/5 mx-auto rounded-2xl my-10">
+    <div className="p-8 flex flex-col md:flex-row gap-8 justify-around items-center bg-gray-100 w-4/5 mx-auto rounded-2xl my-10">
       <div>
         <h1 className="text-3xl text-sky-700 font-bold mb-10">
           به فروشگاه بانی فون خوش آمدید.
         </h1>
-        <p className="text-xl text-amber-800 mt-10">
+        <p className="text-xl text-gray-800 mt-10">
           مکانی برای پیدا کردن موبایل های روز بازار
         </p>
       </div>
