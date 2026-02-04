@@ -12,6 +12,9 @@ function Header() {
     <header className="bg-sky-600 p-2.5">
       <div className="flex flex-row-reverse justify-between max-w-4/5 my-0 mx-auto py-0 px-5">
         <Link
+          onClick={() => {
+            setIsActiveMobile((prev) => !prev);
+          }}
           className="relative z-50 flex justify-between items-center gap-4 text-white"
           href={"/"}
         >
@@ -37,30 +40,35 @@ function Header() {
           }`}
         >
           <Link
+            onClick={() => {
+              setIsActiveMobile((prev) => !prev);
+            }}
             className="block text-white no-underline py-2.5 px-0 md:p-0"
             href={"/"}
           >
             صفحه اصلی
           </Link>
           <Link
+            onClick={() => {
+              setIsActiveMobile((prev) => !prev);
+            }}
             className="block text-white no-underline py-2.5 px-0 md:p-0"
             href={"/products"}
           >
             محصولات
           </Link>
           <Link
+            onClick={() => {
+              setIsActiveMobile((prev) => !prev);
+            }}
             className="block text-white no-underline py-2.5 px-0 md:p-0"
             href={"/cart"}
           >
             سبد خرید
           </Link>
-          {cart.length > 0 ? (
-            <span className="block text-white no-underline py-2.5 px-0 md:p-0">
-              {enTofa(cart.length)}
-            </span>
-          ) : (
-            ""
-          )}
+          <span className="block center w-4 h-3 bg-white text-sky-600 rounded-lg no-underline py-2.5 px-0 md:p-0">
+            {enTofa(cart.length)}
+          </span>
         </nav>
         <button
           onClick={() => {
